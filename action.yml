@@ -1,0 +1,12 @@
+name: 'Build cv'
+description: 'Compile the cv using xelatex'
+inputs:
+  filename:
+    description: 'Path to the main .tex file'
+    required: true
+    default: 'src/cv.tex'
+runs:
+  using: docker
+  image: Dockerfile
+  args:
+    - ${{ inputs.filename }}

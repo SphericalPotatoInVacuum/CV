@@ -1,0 +1,26 @@
+name: Build pdf
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Compile .tex
+        uses: ./
+        with:
+          filename: 'src/cv.tex'
+          
+      - name: Commit compiled pdf files
+        if: success()
+        run: |
+          git add -f **.pdf
+          author=${GITHUB_ACTOR:=github-actions}
+          git config user.name "$author"
+          git config user.email "$author@users.noreply.github.com"
+          git commit --allow-empty -m "Actualize pdf"
+          git push
