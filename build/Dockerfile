@@ -12,4 +12,4 @@ WORKDIR /build
 
 COPY . .
 
-ENTRYPOINT ["bash", "build.sh"]
+ENTRYPOINT ["bash", "build/build.sh"]
