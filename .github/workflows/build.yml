@@ -22,5 +22,5 @@ jobs:
           author=${GITHUB_ACTOR:=github-actions}
           git config user.name "$author"
           git config user.email "$author@users.noreply.github.com"
-          git commit --allow-empty -m "Actualize pdf"
+          git commit --allow-empty -m "✅ Actualize pdf"
           git push
