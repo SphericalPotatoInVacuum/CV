@@ -1,14 +1,12 @@
 FROM fedora:36
 
-RUN dnf install -yv texlive-collection-basic
-
-RUN dnf install -yv 'tex(everysel.sty)'
-RUN dnf install -y 'tex(fontawesome.sty)'
-RUN dnf install -y 'tex(roboto.sty)'
-RUN dnf install -y 'tex(sourcesanspro.sty)'
-RUN dnf install -y 'tex(tcolorbox.sty)'
-RUN dnf install -y 'tex(parskip.sty)'
-# RUN dnf install -y texlive-lh
+RUN dnf install -yv texlive-collection-basic    \
+    'tex(everysel.sty)'                         \
+    'tex(fontawesome.sty)'                      \
+    'tex(roboto.sty)'                           \
+    'tex(sourcesanspro.sty)'                    \
+    'tex(tcolorbox.sty)'                        \
+    'tex(parskip.sty)'
 
 WORKDIR /build
 
