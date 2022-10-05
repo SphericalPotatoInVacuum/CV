@@ -24,3 +24,8 @@ jobs:
           git config user.email "$author@users.noreply.github.com"
           git commit --allow-empty -m "✅ Actualize pdf"
           git push
+
+      - name: Deploy to github pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: out # The folder the action should deploy.
