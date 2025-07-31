@@ -663,6 +663,12 @@
   \vspace{-5mm}
 }
 
+\newenvironment{cvitemsnested}{
+    \begin{itemize}[leftmargin=2ex, nosep, noitemsep]
+}{
+    \end{itemize}
+}
+
 
 %-------------------------------------------------------------------------------
 %                Commands for elements of Cover Letter

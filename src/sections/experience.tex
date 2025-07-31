@@ -8,6 +8,40 @@
 %	CONTENT
 %-------------------------------------------------------------------------------
 \begin{cventries}
+  %---------------------------------------------------------
+  \cventry
+  {Software Engineer} % Job title
+  {Nebius} % Organization
+  {Belgrade, Serbia} % Location
+  {Jul 2024 -- Present} % Date(s)
+  {
+    \begin{cvitems} % Description(s) of tasks/responsibilities
+        \item{KubeVirt Integration and Automation}
+        \begin{cvitemsnested}
+        \item{Architected KubeVirt testing infrastructure involving nested Kubernetes environments and complex networking, integrating automated CI/CD pipelines, and enabling reliable storage tests.}
+        \end{cvitemsnested}
+        \item{Preemptible Instances}
+        \begin{cvitemsnested}
+        \item{Designed and implemented platform controls for preemptible instances, enabling fine-grained access for external clients.}
+        \item{Implemented audit event generation for preemption operations to enhance security and visibility.}
+        \item{As a result of this work, preemptible instances are now available to external clients, allowing for much better capacity usage and profitability.}
+        \end{cvitemsnested}
+        \item{Topology Resilience and Resource Optimization}
+        \begin{cvitemsnested}
+        \item{Designed and configured topology spread constraints for pod placement, enhancing system resilience and fault tolerance across availability zones.}
+        \item{Collaborated on the event specification for resource shortage notifications, improving capacity planning and issue visibility.}
+        \end{cvitemsnested}
+        \item{Monitoring and Alerting}
+        \begin{cvitemsnested}
+        \item{Developed and optimized alerts for leader availability, GPU capacity, log integrity, and system health.}
+        \item{Improved proactive issue detection, with some alerts helping detect incidents before clients were impacted.}
+        \end{cvitemsnested}
+        \item{API Development}
+        \begin{cvitemsnested}
+        \item{Implemeted API endpoints for working with compute operations, allowing for monitoring of compute resources. They now represent 10\% to 40\% of all API calls.}
+        \end{cvitemsnested}
+    \end{cvitems}
+  }
 
   %---------------------------------------------------------
   \cventry
@@ -34,7 +68,7 @@
       reducing request time by 85\% and number of lines of code required to make requests by 50\%.
       \item Reworked logging system, resulting in 1000 lines codebase size reduction, improving readability, decreasing complexity
       and providing new possibilities for enforcing thread safety, helping fix race condition in multiple unit tests.
-      \item Introduced static code style checks for project with 50'000 lines of C++ code and refactored project to comply with new requirements.
+      \item Introduced static code style checks for project with 50'000 lines of C++ code and refactored it to comply with new requirements.
     \end{cvitems}
   }
 
@@ -47,8 +81,6 @@
   {
     \begin{cvitems} % Description(s) of tasks/responsibilities
       \item Proposed location and workday data gathering pipeline, getting data from more than 1500 employees. Prepared it for route finding algorithm using pandas. Created converter from algorithm output to pdf timetables using Python.
-      \item Proposed way of transferring large files (up to 10GB) using gRPC, enabling robust data upload to route finding computation unit.
-      \item Developed aggregator \href{https://www.sibur.ru/bus/}{website} of bus monitoring links for different cities using React.js, allowing users to easily access relevant link when doing business trips.
       \item Implemented Java library for easier calls to API that enabled automated updates of bus routes, eliminating whole workday of manual work every week.
       \item Created Java library for automation of calculations that were previously carried out in excel, removing human link from production chain, increasing performance and reliability.
     \end{cvitems}
